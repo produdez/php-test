@@ -32,7 +32,14 @@ Reference Official Doc ([Getting Started](https://www.doctrine-project.org/proje
 
 ### Verify Doctrine Installation
 
-1. Run `php bin/doctrine orm:schema-tool:update --force --dump-sql`
-2. You should get some green text saying `[OK] Database schema updated successfully!`
-3. Get more of the tools' information by using `--help`
+1. Start XAMPP and run MySQL
+2. Run `php bin/doctrine orm:schema-tool:update --force --dump-sql`
+3. You should get some green text saying `[OK] Database schema updated successfully!`
+4. Get more of the tools' information by using `--help`
+
+### Test The ORM code out
+
+1. Run Apache Server
+2. Go to `http://localhost/src/pages/newProduct.html` to create new product
+3. Then check out `showProduct.php` or `queryProducts.php` for a list of products
 

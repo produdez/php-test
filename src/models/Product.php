@@ -1,7 +1,6 @@
 
 <?php
 // src/Product.php
-
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
@@ -15,5 +14,18 @@ class Product
     #[ORM\Column(type: 'string')]
     private string $name;
 
-    // .. (other code)
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
 }
