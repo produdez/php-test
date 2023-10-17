@@ -14,19 +14,14 @@ $isDevMode = true;
 $config = ORMSetup::createAttributeMetadataConfiguration(array(__DIR__.$modelsFolder), $isDevMode);
 
 // database configuration parameters
-// $conn = array(
-//     'driver'   => 'pdo_mysql',
-//     'user'     => 'root',
-//     'password' => '',
-//     'dbname'   => 'btb-project',
-//     'host'     => '127.0.0.1'
-// );
-
-// TOOD: setup to work with mySQL
-$conn = DriverManager::getConnection([
-    'driver' => 'pdo_sqlite',
-    'path' => __DIR__ . '/db.sqlite',
-], $config);
+// TODO: change database and configs later in the dev process
+$conn = array(
+    'driver'   => 'pdo_mysql',
+    'user'     => 'root',
+    'password' => '',
+    'dbname'   => 'test',
+    'host'     => '127.0.0.1'
+);
 
 // obtaining the entity manager
 $entityManager = EntityManager::create($conn, $config);
