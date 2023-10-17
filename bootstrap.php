@@ -8,11 +8,10 @@ use Doctrine\ORM\ORMSetup;
 require_once "vendor/autoload.php";
 
 // Create a simple "default" Doctrine ORM configuration for Annotations
+$modelsFolder = "/src/models";
 $isDevMode = true;
-$proxyDir = null;
-$cache = null;
-$useSimpleAnnotationReader = false;
-$config = ORMSetup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);
+
+$config = ORMSetup::createAttributeMetadataConfiguration(array(__DIR__.$modelsFolder), $isDevMode);
 
 // database configuration parameters
 // $conn = array(
@@ -23,6 +22,7 @@ $config = ORMSetup::createAnnotationMetadataConfiguration(array(__DIR__."/src"),
 //     'host'     => '127.0.0.1'
 // );
 
+// TOOD: setup to work with mySQL
 $conn = DriverManager::getConnection([
     'driver' => 'pdo_sqlite',
     'path' => __DIR__ . '/db.sqlite',
