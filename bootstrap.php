@@ -24,4 +24,5 @@ $conn = array(
 );
 
 // obtaining the entity manager
+// TODO: update to non-deprecated code
 $entityManager = EntityManager::create($conn, $config);
