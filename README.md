@@ -43,3 +43,23 @@ Reference Official Doc ([Getting Started](https://www.doctrine-project.org/proje
 2. Go to `http://localhost/src/pages/newProduct.html` to create new product
 3. Then check out `showProduct.php` or `queryProducts.php` for a list of products
 
+## Installing PHP debugger
+
+1. Just follow instructions from [xdebug](https://xdebug.org/wizard)
+2. Verify by `php_info.php` page (should have a XDebug section)
+
+## Debugging PHP server with VSCode
+
+### Prerequisites
+
+1. PHP Debugger extension
+
+### Setup Debug
+
+Note: here we're debugging from a vscode's PHP server, not apache server (i don't know how to do that). So you can disable apache server when debugging
+
+1. Go to debug panel and generate a configuration file
+2. Find this config preset and add it. It is called "PHP: Launch Built-in web server"
+3. The default configs from the preset should work just fine, set some breakpoints and launch the debug server
+4. Open browser and navigate to file you need to debug, example link: `http://localhost:59605/src/pages/queryProducts.php`
+
