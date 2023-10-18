@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript" src="../../../dist/jquery.min.js"></script>
+	</head>
+	<body>
+		<div>
+			<span class="figure"></span>
+		</div>
+		<button type="button" id="like">Like</button>
+	</body>
+	<script type="text/javascript">
+		var clicks = 0;
+		$("#like").click(function () {
+			clicks++;
+			$(".figure").html(clicks);
+		});
+	</script>
+</html>
+
