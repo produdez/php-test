@@ -63,3 +63,43 @@ Note: here we're debugging from a vscode's PHP server, not apache server (i don'
 3. The default configs from the preset should work just fine, set some breakpoints and launch the debug server
 4. Open browser and navigate to file you need to debug, example link: `http://localhost:59605/src/pages/queryProducts.php`
 
+### Installing Tailwind CSS
+
+Following guidelines from [tailwind install page](https://tailwindcss.com/docs/installation)
+
+1. We're using the standalone CLI in this ([blog post](https://tailwindcss.com/blog/standalone-cli))
+2. Let's download the executable tailwind CLI and put it in `bin` (get the file from [github](https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.3.3) and rename as `tailwindcss.exe`
+3. Initialize Tailwind: `bin/tailwindcss init`
+4. Configure template path in `tailwind.config.js`, setting contents to `"./src/**/*.{html,js,php}"`
+
+   ```[javascript]
+   module.exports = {
+      content: ["./src/**/*.{html,js,php}"],
+      theme: {
+         extend: {},
+      },
+      plugins: [],
+      }
+   ```
+
+5. Create `src/input.css`
+
+   ```[css]
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
+
+6. Run the tailwind process
+
+   ```[bash]
+   npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+   ```
+
+   This will watch all your content files and build/update the `output.css` to match which tailwind classes/utils that has been use in our project. Remember to
+
+   - use the `output.css` file in your HTMLs
+   - Run the `tailwindcss --watch` when you want to see styles updated on your page
+
+7. Try the `src/pages/tailwind` page out
+

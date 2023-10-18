@@ -22,3 +22,7 @@ db.sqlite
 # Ignore all local history of files
 .history
 .ionide
+
+# Tailwind CLI
+*/tailwindcss.exe
+/dist
