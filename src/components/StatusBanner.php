@@ -25,8 +25,14 @@ function StatusBanner($text = "Some Status", $type = "success")
 			return;
 	}
 	echo '
-		<div class="w-full text-center ' . $bannerClass . '">
+		<div id="status-banner" class="w-full text-center ' . $bannerClass . '">
 			<p class="p-2 ' . $textClass . '"> ' . $text . ' </p>
 		</div>
+
+		<script>
+			setTimeout(() => {
+				const box = $("#status-banner").remove();
+			}, 5000);
+		</script>
 	';
 };
