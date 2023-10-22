@@ -1,18 +1,18 @@
 <?php
-	// Component variables
-	$c_meta_title = "403_forbidden";
+// Component variables
+$c_meta_title = "403_forbidden";
 
-	// Import reusable component
-	include '../../components/Button.php'
+// Import reusable component
+include '../../components/Button.php'
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- head tag included with above c_meta_title variable -->
-<?php include '../../components/meta.php'?>
+<?php include '../../components/meta.php' ?>
 
 <body>
 	<!-- Raw included header -->
-	<?php include '../../components/header.php'?>
+	<?php include '../../components/header.php' ?>
 
 	<div class="w-screen bg-red-100">
 		<div class="flex flex-col items-center text-center w-10/12 h-screen  mx-auto">
@@ -21,7 +21,7 @@
 	</div>
 
 	<!-- Raw included footer -->
-	<?php include '../../components/footer.php'?>
+	<?php include '../../components/footer.php' ?>
 </body>
-</html>
 
+</html>

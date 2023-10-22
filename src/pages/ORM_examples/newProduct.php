@@ -17,9 +17,11 @@ $entityManager->flush();
 
 <!DOCTYPE html>
 <html lang="en">
-	<body>
-		<?php
-		echo "Created Product with ID " . $product->getId() . "\n";
-		?>
-	</body>
+
+<body>
+	<?php
+	echo "Created Product with ID " . $product->getId() . "\n";
+	?>
+</body>
+
 </html>

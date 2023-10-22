@@ -11,11 +11,11 @@ $password = $_POST['password'];
 
 
 try {
-	if(!$username || !$password) throw new Error('Credentials cannot be empty');
+	if (!$username || !$password) throw new Error('Credentials cannot be empty');
 
 	$userRepository = $entityManager->getRepository('User');
 	$user = $userRepository->findOneBy(array('username' => $username, 'password' => $password));
-	if($user == null) {
+	if ($user == null) {
 		throw new Error("Invalid Login Credentials");
 	}
 

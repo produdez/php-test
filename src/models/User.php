@@ -11,7 +11,7 @@ class User
     #[ORM\Column(type: 'integer')]
     #[ORM\GeneratedValue]
     private int|null $id = null;
-    
+
     // TODO: add more DB constraints (unique, non-empty, default values)
     #[ORM\Column(type: 'string')]
     private string $username;

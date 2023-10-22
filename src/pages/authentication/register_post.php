@@ -12,20 +12,20 @@ $fullName = $_POST['fullName'];
 
 
 try {
-	if(!$username || !$password) throw new Error('Credentials cannot be empty');
+	if (!$username || !$password) throw new Error('Credentials cannot be empty');
 
 	$userRepository = $entityManager->getRepository('User');
 	$user = $userRepository->findOneBy(array('username' => $username));
-	if($user != null) {
+	if ($user != null) {
 		throw new Error("User Already Exists");
 	}
-	
+
 	// TODO: add more server-side validations + encryption
 	$user = new User();
 	$user->setUsername($username);
 	$user->setPassword($password);
 	$user->setFullName($fullName);
-	
+
 	$entityManager->persist($user);
 	$entityManager->flush();
 

@@ -7,13 +7,15 @@ $products = $productRepository->findAll();
 ?>
 
 <html lang="en">
-	<body>
-		<p>
+
+<body>
+	<p>
 		<?php
-			foreach ($products as $product) {
-				echo $product->getId()." - ".$product->getName()."\n";
-			}
+		foreach ($products as $product) {
+			echo $product->getId() . " - " . $product->getName() . "\n";
+		}
 		?>
-		</p>
-	</body>
+	</p>
+</body>
+
 </html>

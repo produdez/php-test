@@ -1,7 +1,8 @@
 <?php
 
-function StatusBanner ($text="Some Status", $type="success") {
-	if(!$text) return;
+function StatusBanner($text = "Some Status", $type = "success")
+{
+	if (!$text) return;
 
 	switch ($type) {
 		case 'success':
@@ -24,8 +25,8 @@ function StatusBanner ($text="Some Status", $type="success") {
 			return;
 	}
 	echo '
-		<div class="w-full text-center '. $bannerClass .'">
-			<p class="p-2 '. $textClass .'"> '. $text .' </p>
+		<div class="w-full text-center ' . $bannerClass . '">
+			<p class="p-2 ' . $textClass . '"> ' . $text . ' </p>
 		</div>
 	';
 };

@@ -11,7 +11,7 @@ require_once "vendor/autoload.php";
 $modelsFolder = "/src/models";
 $isDevMode = true;
 
-$config = ORMSetup::createAttributeMetadataConfiguration(array(__DIR__.$modelsFolder), $isDevMode);
+$config = ORMSetup::createAttributeMetadataConfiguration(array(__DIR__ . $modelsFolder), $isDevMode);
 
 // database configuration parameters
 // TODO: change database and configs later in the dev process

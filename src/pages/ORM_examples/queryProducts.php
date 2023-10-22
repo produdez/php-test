@@ -1,5 +1,3 @@
-
-
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/bootstrap.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/src/models/Product.php";
@@ -11,13 +9,15 @@ $products = $query->getResult();
 ?>
 
 <html lang="en">
-	<body>
-		<p>
+
+<body>
+	<p>
 		<?php
-			foreach ($products as $product) {
-				echo $product->getId()." - ".$product->getName()."\n";
-			}
+		foreach ($products as $product) {
+			echo $product->getId() . " - " . $product->getName() . "\n";
+		}
 		?>
-		</p>
-	</body>
+	</p>
+</body>
+
 </html>

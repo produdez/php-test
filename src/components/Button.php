@@ -9,5 +9,3 @@ function Button ($text="Button", $type="summit", $disabled=false, $color="red") 
 		</button>
 	';
 };
-
-?>
