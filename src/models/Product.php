@@ -1,6 +1,6 @@
 
 <?php
-// src/Product.php
+// src/models/Product.php
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
