@@ -93,7 +93,7 @@ Following guidelines from [tailwind install page](https://tailwindcss.com/docs/i
 6. Run the tailwind process
 
    ```[bash]
-   npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+   bin/tailwindcss -i ./src/input.css -o ./dist/output.css --watch
    ```
 
    This will watch all your content files and build/update the `output.css` to match which tailwind classes/utils that has been use in our project. Remember to
