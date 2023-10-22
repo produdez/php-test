@@ -1,4 +1,6 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/middlewares/startSession.php";
+
 // Component variables
 $c_meta_title = "Login Page";
 

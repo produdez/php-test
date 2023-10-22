@@ -9,7 +9,12 @@ class URLUtils
 
 	static public function redirectWithMessage($url, $messageType, $message)
 	{
-		$url = URLUtils::queryMany($url, ['messageType' => $messageType, 'message' => $message]);
+		// message and message type is put in $_SESSION
+		if (session_status() == PHP_SESSION_NONE) throw new Error('PHP session must be started for this function to work!');
+
+		// $url = URLUtils::queryMany($url, ['messageType' => $messageType, 'message' => $message]);
+		$_SESSION['message'] = $message;
+		$_SESSION['messageType'] = $messageType;
 
 		return URLUtils::redirect($url);
 	}
@@ -29,5 +34,3 @@ class URLUtils
 		return $url . '?' . $key . '=' . $value;
 	}
 }
-
-// TODO: how to redirect with data but not in url? PHP

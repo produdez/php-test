@@ -1,4 +1,5 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/middlewares/startSession.php";
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/src/utils/urlUtils.php";
 

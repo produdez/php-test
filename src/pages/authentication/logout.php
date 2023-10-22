@@ -7,4 +7,4 @@ if (isset($_SESSION['userId'])) {
 	unset($_SESSION['userId']);
 }
 
-URLUtils::redirectWithMessage('./login.php', 'success', 'Logout successful!!');
+URLUtils::redirectWithMessage('./login.php', 'info', 'You have logged out');
